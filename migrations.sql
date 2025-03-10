@@ -1,3 +1,5 @@
+CREATE DATABASE orizon_db;
+
 CREATE TABLE `countries` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(255) NOT NULL
@@ -6,7 +8,9 @@ CREATE TABLE `countries` (
 -- Creazione della tabella dei viaggi
 CREATE TABLE `trips` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `available_seats` INT NOT NULL
+  `available_seats` INT NOT NULL,
+  `price` DECIMAL(10, 2) NOT NULL
+
 );
 
 CREATE TABLE `trip_country` (

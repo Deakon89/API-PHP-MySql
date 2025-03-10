@@ -1,0 +1,12 @@
+RewriteEngine On
+# Se la tua applicazione è in una subdirectory, potresti dover settare RewriteBase appropriatamente.
+# Ad esempio, se il tuo progetto è sotto http://localhost/myapp,
+# allora dovresti usare: RewriteBase /myapp/
+RewriteBase /
+
+# Condizioni per reindirizzare tutte le richieste a index.php tranne quelle che corrispondono a file o directory fisiche
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Regola di riscrittura: invia tutte le richieste a index.php
+RewriteRule ^ index.php [QSA,L]

@@ -1,9 +1,9 @@
 <?php
 // config.php
 $host = '127.0.0.1';
-$db   = 'travel_api';
-$user = 'your_username';
-$pass = 'your_password';
+$db   = 'orizon_db';
+$user = 'root';
+$pass = '';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
